@@ -1,0 +1,199 @@
+{
+  "id": "7d3c277c-19d3-404d-9a18-d6f3229c9b80",
+  "version": "2.0",
+  "name": "ZHAW_DevOps_Integration_Test",
+  "url": "https://www.volkswagen.ch",
+  "tests": [{
+    "id": "321db250-dc16-4add-a615-d1e7b4069522",
+    "name": "wikipedia test",
+    "commands": [{
+      "id": "aee40320-682a-4b0f-8753-74c18c736937",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.wikipedia.org/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0f20999-7c02-43e5-9664-0e585381be44",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1329x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8926845b-8d6b-468e-8ce6-c18ef572b916",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "österreich"
+    }, {
+      "id": "77f14723-36a4-4d76-a64c-c621de08770e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.active > .suggestion-text",
+      "targets": [
+        ["css=.active > .suggestion-text", "css:finder"],
+        ["xpath=//div[@id='typeahead-suggestions']/div/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13de0718-bbbd-4ce5-ba8e-572d336bff04",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Liechtenstein",
+      "targets": [
+        ["linkText=Liechtenstein", "linkText"],
+        ["css=p:nth-child(12) > a:nth-child(20)", "css:finder"],
+        ["xpath=//a[contains(text(),'Liechtenstein')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[2]/a[15]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/Liechtenstein')]", "xpath:href"],
+        ["xpath=//a[15]", "xpath:position"],
+        ["xpath=//a[contains(.,'Liechtenstein')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "008a2b51-7525-4377-8cff-d8c93a241278",
+      "comment": "",
+      "command": "verify",
+      "target": "linkText=11 municipalities",
+      "targets": [],
+      "value": "12 municipalities"
+    }]
+  }, {
+    "id": "81374906-5304-4bc1-af27-8758cfffcda3",
+    "name": "vw test",
+    "commands": [{
+      "id": "4299de3b-bde6-4146-9b78-ea5d614f5cb9",
+      "comment": "",
+      "command": "open",
+      "target": "/de.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e51026ce-3f4b-44bd-bbc0-31672dc4dbed",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1329x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ee879a1-ce36-450b-83ac-d69632364c32",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sd-quickstart__button-wrapper:nth-child(3)",
+      "targets": [
+        ["css=.sd-quickstart__button-wrapper:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='reactmount']/div/div/main/div/div/div/div/div/div/div/div[2]/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "19d4d7fa-f44f-4797-8ed1-3db704478e6f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sd-quickstart__button-wrapper:nth-child(3)",
+      "targets": [
+        ["css=.sd-quickstart__button-wrapper:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='reactmount']/div/div/main/div/div/div/div/div/div/div/div[2]/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be69d8b7-17cd-461b-9535-25fcfba0222b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sd-quickstart__dropdown-text",
+      "targets": [
+        ["css=.sd-quickstart__dropdown-text", "css:finder"],
+        ["xpath=//div[@id='reactmount']/div/div/main/div/div/div/div/div/div/div/div[2]/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ef9bbb7-b516-4995-949e-8f69a9a17550",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sd-quickstart__dropdown-menu-entry:nth-child(2) .sd-quickstart__control-font",
+      "targets": [
+        ["css=.sd-quickstart__dropdown-menu-entry:nth-child(2) .sd-quickstart__control-font", "css:finder"],
+        ["xpath=//div[@id='reactmount']/div/div/main/div/div/div/div/div/div/div/div[2]/div[2]/div/div[2]/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Der Golf')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb53350d-635e-478b-9246-cda5c3ae0f95",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Jetzt konfigurieren",
+      "targets": [
+        ["linkText=Jetzt konfigurieren", "linkText"],
+        ["css=.sd-quickstart__button-wrapper:nth-child(3) > .sd-quickstart__button", "css:finder"],
+        ["xpath=//a[contains(text(),'Jetzt konfigurieren')]", "xpath:link"],
+        ["xpath=//div[@id='reactmount']/div/div/main/div/div/div/div/div/div/div/div[2]/div[2]/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.volkswagen.ch/de/konfigurator.html/__app/golf.app')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Jetzt konfigurieren')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3efc6635-d46c-41bc-92a9-e5bad98024bd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.StyledLink-sc-afbv6g:nth-child(2) > .StyledLinkText-sc-12fkfup",
+      "targets": [
+        ["css=.StyledLink-sc-afbv6g:nth-child(2) > .StyledLinkText-sc-12fkfup", "css:finder"],
+        ["xpath=//section[@id='MOFA']/div/div/div/div/div/div[2]/div/div/div/button[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Standardmodelle')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56d90400-bd33-4a89-8957-e4cf098dc125",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,792)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84e90557-e246-474e-86cb-e04c687ae47d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-jWWeWF:nth-child(2) .sc-eIrltS:nth-child(2) > .StyledTextComponent-sc-hqqa9q",
+      "targets": [
+        ["css=.sc-jWWeWF:nth-child(2) .sc-eIrltS:nth-child(2) > .StyledTextComponent-sc-hqqa9q", "css:finder"],
+        ["xpath=//section[@id='MOFA']/div/div/div/div/div/div[2]/div/div/div[2]/div/div/div[2]/div/li/section[3]/ul/li[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/li/section[3]/ul/li[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "766953f1-619b-4f7e-91bf-f37e481881d4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.StyledButtonIcon-sc-bk7es1 > svg",
+      "targets": [
+        ["css=.StyledButtonIcon-sc-bk7es1 > svg", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "82f2036d-af32-4c01-a47a-0b7f365593fb",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.wikipedia.org/", "https://www.blick.ch/"],
+  "plugins": []
+}

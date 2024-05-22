@@ -1,0 +1,82 @@
+{
+  "id": "7d3c277c-19d3-404d-9a18-d6f3229c9b80",
+  "version": "2.0",
+  "name": "ZHAW_DevOps_Integration_Test",
+  "url": "https://www.wikipedia.org/",
+  "tests": [{
+    "id": "321db250-dc16-4add-a615-d1e7b4069522",
+    "name": "wikipedia test",
+    "commands": [{
+      "id": "aee40320-682a-4b0f-8753-74c18c736937",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.wikipedia.org/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0f20999-7c02-43e5-9664-0e585381be44",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1329x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8926845b-8d6b-468e-8ce6-c18ef572b916",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "österreich"
+    }, {
+      "id": "77f14723-36a4-4d76-a64c-c621de08770e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.active > .suggestion-text",
+      "targets": [
+        ["css=.active > .suggestion-text", "css:finder"],
+        ["xpath=//div[@id='typeahead-suggestions']/div/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13de0718-bbbd-4ce5-ba8e-572d336bff04",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Liechtenstein",
+      "targets": [
+        ["linkText=Liechtenstein", "linkText"],
+        ["css=p:nth-child(12) > a:nth-child(20)", "css:finder"],
+        ["xpath=//a[contains(text(),'Liechtenstein')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[2]/a[15]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/Liechtenstein')]", "xpath:href"],
+        ["xpath=//a[15]", "xpath:position"],
+        ["xpath=//a[contains(.,'Liechtenstein')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "008a2b51-7525-4377-8cff-d8c93a241278",
+      "comment": "",
+      "command": "verify",
+      "target": "linkText=11 municipalities",
+      "targets": [],
+      "value": "12 municipalities"
+    }]
+  }],
+  "suites": [{
+    "id": "82f2036d-af32-4c01-a47a-0b7f365593fb",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.wikipedia.org/", "https://www.blick.ch/"],
+  "plugins": []
+}
